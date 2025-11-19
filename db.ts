@@ -1,7 +1,7 @@
 import { MongoClient, Db, Collection } from "mongodb";
 
-const MONGODB_URI = process.env.MONGO_URI as string;
-if (!MONGODB_URI){
+const MONGO_URI = process.env.MONGO_URI as string;
+if (!MONGO_URI){
     throw new Error("MONGO_URI environment variable is undefined");
 }
 
@@ -13,7 +13,7 @@ let db: Db | null = null;
 
 async function connect(): Promise<Db>{
     if (!client){
-        client = new MongoClient(MONGODB_URI);
+        client = new MongoClient(MONGO_URI);
         await client.connect();
         db = client.db(DB_NAME);
     }

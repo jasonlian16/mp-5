@@ -49,7 +49,7 @@ export default function Home() {
             onChange={(e) => setAlias(e.target.value)}
           />
 
-          <button className="bg-blue-600 text-white p-2 rounded">
+          <button className="bg-blue-600 text-white p-2 rounded cursor-pointer">
             Shorten URL
           </button>
         </form>
@@ -67,6 +67,5 @@ export default function Home() {
         )}
       </div>
     </main>
-    
   );
 }
